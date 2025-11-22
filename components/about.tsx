@@ -14,7 +14,8 @@ export function About() {
                 alt="Pamela Peté - Speaker and Transformation Guide"
                 width={600}
                 height={750}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover object-center"
+                style={{ objectPosition: 'center top' }}
                 priority
               />
             </div>

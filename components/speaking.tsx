@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Speaking() {
   return (
     <section id="speaking" className="py-20 px-6 lg:px-8 bg-secondary/30">
@@ -29,12 +31,12 @@ export function Speaking() {
             </ul>
 
             <div className="pt-4">
-              <a
-                href="tel:+18337446483"
+              <Link
+                href="/speaker"
                 className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors"
               >
                 Book a Speaking Event
-              </a>
+              </Link>
             </div>
           </div>
 

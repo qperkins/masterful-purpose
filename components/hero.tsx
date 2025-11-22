@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -59,12 +60,12 @@ export function Hero() {
         </div>
 
         <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center pt-8">
-          <button className="px-8 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
+          <Link href="/about" className="px-8 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center">
             Explore My Work
-          </button>
-          <button className="px-8 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-colors">
+          </Link>
+          <Link href="/speaker" className="px-8 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-colors text-center">
             Book a Speaking Event
-          </button>
+          </Link>
         </div>
       </div>
 

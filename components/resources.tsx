@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Resources() {
   const resources = [
     {
@@ -5,18 +7,21 @@ export function Resources() {
       description:
         "Unlock the foundational principles of goal setting and personal transformation with this essential resource.",
       cta: "Download",
+      href: "/resources",
     },
     {
       title: "Online Courses",
       description:
         "Structured learning programs to master Pamela's proven methods for setting and accomplishing meaningful goals.",
       cta: "Explore Courses",
+      href: "/shop",
     },
     {
       title: "Blog & Insights",
       description:
         "Regular writings on narrative medicine, healing through expression, and living with intention and purpose.",
       cta: "Read Blog",
+      href: "/blog",
     },
   ]
 
@@ -44,9 +49,9 @@ export function Resources() {
                 </h3>
                 <p className="text-foreground/70 leading-relaxed text-sm">{resource.description}</p>
               </div>
-              <button className="ml-4 px-6 py-2 text-primary font-medium hover:text-primary/70 transition-colors whitespace-nowrap text-sm">
+              <Link href={resource.href} className="ml-4 px-6 py-2 text-primary font-medium hover:text-primary/70 transition-colors whitespace-nowrap text-sm">
                 {resource.cta}
-              </button>
+              </Link>
             </div>
           ))}
         </div>

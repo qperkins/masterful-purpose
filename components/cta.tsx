@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function CTA() {
   return (
     <section className="py-20 px-6 lg:px-8">
@@ -18,9 +20,9 @@ export function CTA() {
             >
               Call (833) 7-IGNITE
             </a>
-            <button className="px-8 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/5 transition-colors">
+            <Link href="/contact" className="px-8 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/5 transition-colors inline-block">
               Send a Message
-            </button>
+            </Link>
           </div>
 
           <div className="text-sm text-foreground/60">
