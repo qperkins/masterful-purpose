@@ -20,15 +20,16 @@ export function Story() {
             </p>
           </div>
 
-          {/* Video placeholder */}
+          {/* YouTube Video */}
           <div className="mt-12">
-            <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <div className="text-center">
-                  <p className="text-sm mb-2">Video content</p>
-                  <p className="text-xs">[Video placeholder - Add your video or testimonials here]</p>
-                </div>
-              </div>
+            <div className="aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/e6MVjFk6fKc"
+                title="Narrative Medicine Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

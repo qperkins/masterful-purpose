@@ -11,8 +11,8 @@ export function Footer() {
             <Image 
               src="/pamlogo.png" 
               alt="Logo" 
-              width={120} 
-              height={40}
+              width={300} 
+              height={100}
               className="h-auto"
             />
             <p className="text-sm text-foreground/60">Narrative medicine speaker, poet, and transformation guide.</p>

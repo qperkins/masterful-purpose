@@ -1,17 +1,22 @@
+import Image from "next/image"
+import Link from "next/link"
+
 export function About() {
   return (
     <section id="about" className="py-20 px-6 lg:px-8 bg-secondary/30">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder */}
+          {/* Image */}
           <div className="order-2 md:order-1">
-            <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <div className="text-center">
-                  <p className="text-sm mb-2">Portrait</p>
-                  <p className="text-xs">[Image placeholder]</p>
-                </div>
-              </div>
+            <div className="rounded-lg overflow-hidden shadow-lg" style={{ aspectRatio: '4/5' }}>
+              <Image
+                src="/pam-pete-speaker.jpg"
+                alt="Pamela Peté - Speaker and Transformation Guide"
+                width={600}
+                height={750}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
           </div>
 
@@ -34,13 +39,13 @@ export function About() {
             </p>
 
             <div className="pt-4">
-              <a
-                href="#"
+              <Link
+                href="/about"
                 className="inline-flex items-center text-primary font-medium hover:gap-2 transition-all gap-1"
               >
                 Read her full story
                 <span>→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

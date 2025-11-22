@@ -6,10 +6,12 @@ import Image from "next/image"
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = useMemo(() => [
-    { id: 1, query: "Woman speaking on stage with passion" },
-    { id: 2, query: "Healing and wellness meditation scene" },
-    { id: 3, query: "Writing and journaling therapeutic moment" },
-    { id: 4, query: "Community gathering and connection" },
+    { id: 1, src: "/IMG-20190705-WA0004.jpg", alt: "Pamela speaking at an event" },
+    { id: 2, src: "/IMG-20190706-WA0002.jpg", alt: "Pamela speaking on stage" },
+    { id: 3, src: "/IMG-20190706-WA0003.jpg", alt: "Pamela addressing an audience" },
+    { id: 4, src: "/IMG-20190706-WA0007.jpg", alt: "Pamela speaking passionately" },
+    { id: 5, src: "/IMG-20190706-WA0009.jpg", alt: "Pamela at a speaking engagement" },
+    { id: 6, src: "/IMG-20190706-WA0010.jpg", alt: "Pamela speaking from podium" },
   ], [])
 
   useEffect(() => {
@@ -22,14 +24,20 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 -z-10">
-        {slides.map((slide) => (
-          <div key={slide.id} className="absolute inset-0">
+        {slides.map((slide, index) => (
+          <div 
+            key={slide.id} 
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
             <Image
-              src={`/.jpg?height=1080&width=1920&query=${encodeURIComponent(slide.query)}`}
-              alt={slide.query}
+              src={slide.src}
+              alt={slide.alt}
               fill
-              className="slideshow-image object-cover"
-              unoptimized
+              className="object-cover"
+              priority={index === 0}
+              sizes="100vw"
             />
           </div>
         ))}
