@@ -1,33 +1,37 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
+import Image from "next/image"
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const slides = [
+  const slides = useMemo(() => [
     { id: 1, query: "Woman speaking on stage with passion" },
     { id: 2, query: "Healing and wellness meditation scene" },
     { id: 3, query: "Writing and journaling therapeutic moment" },
     { id: 4, query: "Community gathering and connection" },
-  ]
+  ], [])
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 4000)
     return () => clearInterval(timer)
-  }, [])
+  }, [slides.length])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 -z-10">
         {slides.map((slide) => (
-          <img
-            key={slide.id}
-            src={`/.jpg?height=1080&width=1920&query=${encodeURIComponent(slide.query)}`}
-            alt={slide.query}
-            className="slideshow-image absolute inset-0 w-full h-full object-cover"
-          />
+          <div key={slide.id} className="absolute inset-0">
+            <Image
+              src={`/.jpg?height=1080&width=1920&query=${encodeURIComponent(slide.query)}`}
+              alt={slide.query}
+              fill
+              className="slideshow-image object-cover"
+              unoptimized
+            />
+          </div>
         ))}
 
         <div className="absolute inset-0 bg-black/50"></div>

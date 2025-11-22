@@ -25,16 +25,33 @@ export function Navigation() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
-            <Link href="#about" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+            <Link href="/about" className="text-sm text-foreground/70 hover:text-primary transition-colors">
               About
             </Link>
-            <Link href="#speaking" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+            <Link href="/speaker" className="text-sm text-foreground/70 hover:text-primary transition-colors">
               Speaking
             </Link>
-            <Link href="#resources" className="text-sm text-foreground/70 hover:text-primary transition-colors">
-              Resources
+            <a 
+              href="https://www.pameladpoetry.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-foreground/70 hover:text-primary transition-colors"
+            >
+              Poetry
+            </a>
+            <Link href="/resources" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Free Resources
             </Link>
-            <Link href="#contact" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+            <Link href="/shop" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Shop
+            </Link>
+            <Link href="/events" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Events
+            </Link>
+            <Link href="/blog" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <Link href="/contact" className="text-sm text-foreground/70 hover:text-primary transition-colors">
               Contact
             </Link>
           </div>
@@ -57,16 +74,33 @@ export function Navigation() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
-            <Link href="#about" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+            <Link href="/about" className="text-sm text-foreground/70 hover:text-primary transition-colors">
               About
             </Link>
-            <Link href="#speaking" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+            <Link href="/speaker" className="text-sm text-foreground/70 hover:text-primary transition-colors">
               Speaking
             </Link>
-            <Link href="#resources" className="text-sm text-foreground/70 hover:text-primary transition-colors">
-              Resources
+            <a 
+              href="https://www.pameladpoetry.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-foreground/70 hover:text-primary transition-colors"
+            >
+              Poetry
+            </a>
+            <Link href="/resources" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Free Resources
             </Link>
-            <Link href="#contact" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+            <Link href="/shop" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Shop
+            </Link>
+            <Link href="/events" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Events
+            </Link>
+            <Link href="/blog" className="text-sm text-foreground/70 hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <Link href="/contact" className="text-sm text-foreground/70 hover:text-primary transition-colors">
               Contact
             </Link>
             <a

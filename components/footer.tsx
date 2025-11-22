@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Mail, Phone } from "lucide-react"
 
 export function Footer() {
@@ -21,24 +22,49 @@ export function Footer() {
             <h4 className="font-medium text-foreground text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm text-foreground/60">
               <li>
-                <a href="#about" className="hover:text-primary transition-colors">
+                <Link href="/about" className="hover:text-primary transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#speaking" className="hover:text-primary transition-colors">
+                <Link href="/speaker" className="hover:text-primary transition-colors">
                   Speaking
+                </Link>
+              </li>
+              <li>
+                <a 
+                  href="https://www.pameladpoetry.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Poetry
                 </a>
               </li>
               <li>
-                <a href="#resources" className="hover:text-primary transition-colors">
-                  Resources
-                </a>
+                <Link href="/resources" className="hover:text-primary transition-colors">
+                  Free Resources
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-primary transition-colors">
+                <Link href="/shop" className="hover:text-primary transition-colors">
+                  Shop
+                </Link>
+              </li>
+              <li>
+                <Link href="/events" className="hover:text-primary transition-colors">
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-primary transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -52,9 +78,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link href="/blog" className="hover:text-primary transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-primary transition-colors">

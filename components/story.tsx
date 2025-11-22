@@ -15,8 +15,8 @@ export function Story() {
             </p>
 
             <p className="text-foreground/75 leading-relaxed text-lg text-center mt-6">
-              Through the intentional use of words—through expression, reflection, and courageous honesty—we don't just
-              process trauma; we transform it into purpose. We don't just survive; we step into our masterful purpose.
+              Through the intentional use of words—through expression, reflection, and courageous honesty—we don&apos;t just
+              process trauma; we transform it into purpose. We don&apos;t just survive; we step into our masterful purpose.
             </p>
           </div>
 

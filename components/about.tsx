@@ -23,7 +23,7 @@ export function About() {
             </div>
 
             <p className="text-foreground/75 leading-relaxed">
-              Pamela's true story of rags to riches against all odds is moving and uplifting. She shares her pain and
+              Pamela&apos;s true story of rags to riches against all odds is moving and uplifting. She shares her pain and
               tells what she had to do to rise to success and how by grace of God, she is still alive.
             </p>
 
